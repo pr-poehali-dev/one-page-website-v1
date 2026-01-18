@@ -120,6 +120,39 @@ const Index = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      name: 'Sarah M.',
+      rating: 5,
+      text: 'Absolutely amazing quality! The videos exceeded all my expectations. Fire content! 🔥',
+      avatar: '👩',
+    },
+    {
+      name: 'Mike R.',
+      rating: 5,
+      text: 'Best investment ever! My engagement skyrocketed. This is pure gold!',
+      avatar: '👨',
+    },
+    {
+      name: 'Jessica L.',
+      rating: 5,
+      text: 'Incredible work! Everything is super professional. Highly recommend! ⭐',
+      avatar: '👱‍♀️',
+    },
+    {
+      name: 'David K.',
+      rating: 5,
+      text: 'Top-tier quality! Fast delivery and stunning results. Absolutely perfect!',
+      avatar: '🧔',
+    },
+    {
+      name: 'Emma T.',
+      rating: 5,
+      text: 'Mind-blowing content! Worth every penny. This product is straight fire! 🚀',
+      avatar: '👩‍🦰',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -195,12 +228,46 @@ const Index = () => {
             >
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-primary to-secondary text-lg px-12 py-7 hover:scale-105 transition-transform shadow-lg"
+                className="bg-white/90 backdrop-blur-sm text-primary text-lg px-12 py-7 hover:scale-105 transition-transform shadow-2xl border-2 border-white/50"
               >
                 <Icon name="Send" className="mr-3" size={24} />
                 Contact Admin on Telegram
               </Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">What Our Clients Say</h2>
+            <p className="text-xl text-white/80">Real reviews from satisfied customers</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Card 
+                key={index}
+                className="p-6 bg-white/90 backdrop-blur-md hover:scale-105 transition-all duration-300 animate-fade-in border-2 border-white/50 shadow-xl"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+                    <div className="flex gap-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">{testimonial.text}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
