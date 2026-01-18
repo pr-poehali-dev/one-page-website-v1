@@ -142,12 +142,17 @@ const Index = () => {
 
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20 animate-gradient bg-[length:200%_200%]"></div>
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-gradient bg-[length:200%_200%]">
-              Professional Video Production
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="animate-fade-in max-w-5xl mx-auto">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-8 group">
+              <img 
+                src="https://cdn.poehali.dev/files/Screenshot-39.jpg" 
+                alt="Hero"
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+            </div>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
               Transform your vision into stunning visual content with our premium video services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
