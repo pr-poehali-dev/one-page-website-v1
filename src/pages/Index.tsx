@@ -310,29 +310,6 @@ const Index = () => {
           </Button>
         </div>
       </a>
-
-      <footer className="py-12 border-t border-border">
-        <div className="container mx-auto px-6 text-center">
-          <div className="mb-6">
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-              VideoStudio
-            </div>
-            <p className="text-muted-foreground">Professional video production services</p>
-          </div>
-          <div className="flex justify-center gap-6 mb-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Icon name="Instagram" size={24} />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Icon name="Youtube" size={24} />
-            </a>
-            <a href="https://t.me/tokare2" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Icon name="Send" size={24} />
-            </a>
-          </div>
-          <p className="text-sm text-muted-foreground">© 2024 VideoStudio. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };
