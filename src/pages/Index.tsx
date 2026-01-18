@@ -186,6 +186,9 @@ const Index = () => {
 
       <section id="home" className="pt-32 pb-16 bg-muted/30">
         <div className="container mx-auto px-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-center mb-12 text-white drop-shadow-2xl animate-fade-in">
+            MEGA BEST 2026
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {portfolioItems.map((item, index) => (
               <div 
