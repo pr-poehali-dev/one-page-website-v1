@@ -249,39 +249,22 @@ const Index = () => {
 
       <section id="portfolio" className="py-24 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Portfolio</h2>
-            <p className="text-xl text-muted-foreground">Projects that made an impact</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {portfolioItems.map((item, index) => (
-              <Card 
+              <div 
                 key={index}
-                className="group relative overflow-hidden bg-card/50 backdrop-blur-sm hover:scale-105 transition-all duration-300 animate-fade-in cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl hover:scale-105 transition-all duration-300 animate-fade-in cursor-pointer shadow-lg"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative aspect-video overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Icon name="PlayCircle" size={48} className="text-primary drop-shadow-lg" />
-                  </div>
+                <img 
+                  src={item.image} 
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-full object-cover aspect-[3/4] group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Icon name="Eye" size={40} className="text-primary drop-shadow-lg" />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold text-lg">{item.title}</h3>
-                    <Icon name="TrendingUp" size={16} className="text-primary" />
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">{item.category}</span>
-                    <span className="text-primary font-medium">{item.views} views</span>
-                  </div>
-                </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
