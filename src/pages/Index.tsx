@@ -184,23 +184,7 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 animate-gradient bg-[length:200%_200%]"></div>
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="animate-fade-in max-w-7xl mx-auto">
-            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl group">
-              <img 
-                src="https://cdn.poehali.dev/files/Screenshot-39.jpg" 
-                alt="Hero"
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted/30">
+      <section id="home" className="pt-32 pb-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {portfolioItems.map((item, index) => (
