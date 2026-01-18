@@ -77,10 +77,36 @@ const Index = () => {
   ];
 
   const portfolioItems = [
-    { title: 'Corporate Video', views: '1M+', category: 'Business' },
-    { title: 'Product Launch', views: '500K+', category: 'Commercial' },
-    { title: 'Brand Story', views: '2M+', category: 'Marketing' },
-    { title: 'Social Campaign', views: '800K+', category: 'Social Media' },
+    { 
+      title: 'Fashion Content', 
+      views: '1M+', 
+      category: 'Fashion',
+      image: 'https://cdn.poehali.dev/files/Screenshot-38.jpg'
+    },
+    { 
+      title: 'Lifestyle Series', 
+      views: '500K+', 
+      category: 'Lifestyle',
+      image: 'https://cdn.poehali.dev/files/Screenshot-39.jpg'
+    },
+    { 
+      title: 'Creative Campaign', 
+      views: '2M+', 
+      category: 'Creative',
+      image: 'https://cdn.poehali.dev/files/Screenshot-40.jpg'
+    },
+    { 
+      title: 'Brand Portfolio', 
+      views: '800K+', 
+      category: 'Commercial',
+      image: 'https://cdn.poehali.dev/files/Screenshot-42.jpg'
+    },
+    { 
+      title: 'Personal Branding', 
+      views: '1.5M+', 
+      category: 'Personal',
+      image: 'https://cdn.poehali.dev/files/Screenshot-43.jpg'
+    },
   ];
 
   return (
@@ -223,15 +249,22 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">Projects that made an impact</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolioItems.map((item, index) => (
               <Card 
                 key={index}
                 className="group relative overflow-hidden bg-card/50 backdrop-blur-sm hover:scale-105 transition-all duration-300 animate-fade-in cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <Icon name="PlayCircle" size={48} className="text-primary group-hover:scale-110 transition-transform" />
+                <div className="relative aspect-video overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <Icon name="PlayCircle" size={48} className="text-primary drop-shadow-lg" />
+                  </div>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
