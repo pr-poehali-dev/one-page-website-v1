@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +23,15 @@ const Index = () => {
       element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(id);
     }
+  };
+
+  const copyToClipboard = (text: string, label: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      toast({
+        title: 'Copied!',
+        description: `${label} address copied to clipboard`,
+      });
+    });
   };
 
   const plans = [
@@ -236,10 +247,23 @@ const Index = () => {
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${method.color} flex items-center justify-center mb-4`}>
                   <Icon name={method.icon as any} size={24} className="text-white" />
                 </div>
-                <h4 className="font-semibold mb-2 text-lg">{method.name}</h4>
-                <p className="text-sm text-muted-foreground break-all mb-2">{method.address}</p>
-                {method.note && (
-                  <p className="text-xs text-primary font-medium">{method.note}</p>
+                <h4 className="font-semibold mb-3 text-lg">{method.name}</h4>
+                <div className="bg-background/50 rounded-lg p-3 mb-3">
+                  <p className="text-sm text-muted-foreground break-all mb-2">{method.address}</p>
+                  {method.note && (
+                    <p className="text-xs text-primary font-medium mt-2">{method.note}</p>
+                  )}
+                </div>
+                {method.address !== 'Coming Soon' && (
+                  <Button
+                    onClick={() => copyToClipboard(method.address, method.name)}
+                    variant="outline"
+                    size="sm"
+                    className="w-full gap-2 hover:bg-primary/10"
+                  >
+                    <Icon name="Copy" size={16} />
+                    Copy Address
+                  </Button>
                 )}
               </Card>
             ))}
