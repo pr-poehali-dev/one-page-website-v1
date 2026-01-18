@@ -291,6 +291,21 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <a 
+              href="https://t.me/tokare2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-primary to-secondary text-lg px-12 py-7 hover:scale-105 transition-transform shadow-lg"
+              >
+                <Icon name="Send" className="mr-3" size={24} />
+                Contact Admin on Telegram
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
