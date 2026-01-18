@@ -152,43 +152,18 @@ const Index = () => {
       </nav>
 
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20 animate-gradient bg-[length:200%_200%]"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="animate-fade-in max-w-5xl mx-auto">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-8 group">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 animate-gradient bg-[length:200%_200%]"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="animate-fade-in max-w-7xl mx-auto">
+            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl group">
               <img 
                 src="https://cdn.poehali.dev/files/Screenshot-39.jpg" 
                 alt="Hero"
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
-            </div>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
-              Transform your vision into stunning visual content with our premium video services
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-secondary text-lg px-8 py-6 hover:scale-105 transition-transform"
-                onClick={() => scrollToSection('services')}
-              >
-                <Icon name="Play" className="mr-2" size={20} />
-                View Packages
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 py-6 border-2 hover:bg-primary/10 hover:scale-105 transition-all"
-                onClick={() => scrollToSection('portfolio')}
-              >
-                <Icon name="Eye" className="mr-2" size={20} />
-                Our Work
-              </Button>
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent"></div>
             </div>
           </div>
-        </div>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-float">
-          <Icon name="ChevronDown" size={32} className="text-primary" />
         </div>
       </section>
 
