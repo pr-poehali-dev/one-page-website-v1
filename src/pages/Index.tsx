@@ -212,7 +212,7 @@ const Index = () => {
             >
               <Button 
                 size="lg"
-                className="bg-white/90 backdrop-blur-sm text-primary text-lg px-12 py-7 hover:scale-105 transition-transform shadow-2xl border-2 border-white/50"
+                className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-12 py-7 hover:scale-105 transition-all shadow-2xl"
               >
                 <Icon name="Send" className="mr-3" size={24} />
                 Contact Admin on Telegram
