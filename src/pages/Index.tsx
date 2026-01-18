@@ -192,6 +192,44 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {portfolioItems.map((item, index) => (
+              <div 
+                key={index}
+                className="group relative overflow-hidden rounded-2xl hover:scale-105 transition-all duration-300 animate-fade-in cursor-pointer shadow-lg"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <img 
+                  src={item.image} 
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-full object-cover aspect-[3/4] group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Icon name="Eye" size={40} className="text-primary drop-shadow-lg" />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <a 
+              href="https://t.me/tokare2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-primary to-secondary text-lg px-12 py-7 hover:scale-105 transition-transform shadow-lg"
+              >
+                <Icon name="Send" className="mr-3" size={24} />
+                Contact Admin on Telegram
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="py-24 relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
@@ -271,43 +309,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="py-24 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {portfolioItems.map((item, index) => (
-              <div 
-                key={index}
-                className="group relative overflow-hidden rounded-2xl hover:scale-105 transition-all duration-300 animate-fade-in cursor-pointer shadow-lg"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <img 
-                  src={item.image} 
-                  alt={`Gallery ${index + 1}`}
-                  className="w-full h-full object-cover aspect-[3/4] group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Icon name="Eye" size={40} className="text-primary drop-shadow-lg" />
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a 
-              href="https://t.me/tokare2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-primary to-secondary text-lg px-12 py-7 hover:scale-105 transition-transform shadow-lg"
-              >
-                <Icon name="Send" className="mr-3" size={24} />
-                Contact Admin on Telegram
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
+
 
       <a
         href="https://t.me/tokare2"
