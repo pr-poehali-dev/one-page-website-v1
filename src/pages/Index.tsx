@@ -118,6 +118,12 @@ const Index = () => {
       category: 'Personal',
       image: 'https://cdn.poehali.dev/files/Screenshot-46.jpg'
     },
+    { 
+      title: 'MEGA Files', 
+      views: 'Premium', 
+      category: 'Content',
+      image: 'https://cdn.poehali.dev/projects/e9e41fa1-812d-4553-bb86-c4bc67c5be5e/bucket/e53e0497-74bc-4aa7-9c01-40fa0392da5b.jpg'
+    },
   ];
 
   const testimonials = [
@@ -221,6 +227,9 @@ const Index = () => {
                 Contact Admin on Telegram
               </Button>
             </a>
+            <p className="text-white/70 text-lg mt-6 animate-fade-in">
+              You will receive MEGA when you purchase
+            </p>
           </div>
         </div>
       </section>
