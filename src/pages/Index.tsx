@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -305,45 +306,54 @@ const Index = () => {
                   <Icon name="Film" size={20} />
                   <span className="text-lg">{plan.videos} video mega</span>
                 </div>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+                      <Icon name="ShoppingCart" className="mr-2" size={18} />
+                      Buy Now
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-80 p-4" align="center">
+                    <h4 className="font-semibold text-lg mb-4">Choose Payment Method</h4>
+                    <div className="space-y-3">
+                      {paymentMethods.map((method, idx) => (
+                        <div 
+                          key={idx}
+                          className="p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors"
+                        >
+                          <div className="flex items-center gap-3 mb-2">
+                            <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${method.color} flex items-center justify-center`}>
+                              <Icon name={method.icon as any} size={16} className="text-white" />
+                            </div>
+                            <span className="font-semibold">{method.name}</span>
+                          </div>
+                          <div className="bg-background/50 rounded p-2 mb-2">
+                            <p className="text-xs text-muted-foreground break-all">{method.address}</p>
+                            {method.note && (
+                              <p className="text-xs text-primary font-medium mt-1">{method.note}</p>
+                            )}
+                          </div>
+                          {method.address !== 'Coming Soon' && (
+                            <Button
+                              onClick={() => copyToClipboard(method.address, method.name)}
+                              variant="outline"
+                              size="sm"
+                              className="w-full gap-2"
+                            >
+                              <Icon name="Copy" size={14} />
+                              Copy
+                            </Button>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </PopoverContent>
+                </Popover>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-8">Payment Methods</h3>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {paymentMethods.map((method, index) => (
-              <Card 
-                key={index}
-                className="p-6 bg-card/50 backdrop-blur-sm hover:scale-105 transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${method.color} flex items-center justify-center mb-4`}>
-                  <Icon name={method.icon as any} size={24} className="text-white" />
-                </div>
-                <h4 className="font-semibold mb-3 text-lg">{method.name}</h4>
-                <div className="bg-background/50 rounded-lg p-3 mb-3">
-                  <p className="text-sm text-muted-foreground break-all mb-2">{method.address}</p>
-                  {method.note && (
-                    <p className="text-xs text-primary font-medium mt-2">{method.note}</p>
-                  )}
-                </div>
-                {method.address !== 'Coming Soon' && (
-                  <Button
-                    onClick={() => copyToClipboard(method.address, method.name)}
-                    variant="outline"
-                    size="sm"
-                    className="w-full gap-2 hover:bg-primary/10"
-                  >
-                    <Icon name="Copy" size={16} />
-                    Copy Address
-                  </Button>
-                )}
-              </Card>
-            ))}
-          </div>
+
         </div>
       </section>
 
