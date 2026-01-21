@@ -313,9 +313,9 @@ const Index = () => {
                       Buy Now
                     </Button>
                   </PopoverTrigger>
-                  <PopoverContent className="w-80 p-4" align="center">
-                    <h4 className="font-semibold text-lg mb-4">Choose Payment Method</h4>
-                    <div className="space-y-3">
+                  <PopoverContent className="w-[600px] p-4" align="center">
+                    <h4 className="font-semibold text-lg mb-4 text-center">Choose Payment Method</h4>
+                    <div className="grid grid-cols-2 gap-3">
                       {paymentMethods.map((method, idx) => (
                         <div 
                           key={idx}
