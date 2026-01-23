@@ -36,33 +36,38 @@ const Index = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-4">
-        <a 
-          href="https://mega.nz/folder/VCkDCLhK#kpjca29NPocQ-wWsa936cw"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button 
-            size="lg"
-            className="bg-gradient-to-r from-red-500 to-orange-500 hover:opacity-90 text-white text-lg px-8 py-6 hover:scale-105 transition-all shadow-2xl"
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
+          <a 
+            href="https://mega.nz/folder/VCkDCLhK#kpjca29NPocQ-wWsa936cw"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Icon name="FolderOpen" className="mr-3" size={24} />
-            Free Sample - MEGA Part 1
-          </Button>
-        </a>
-        <a 
-          href="https://t.me/tokare2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button 
-            size="lg"
-            className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-6 hover:scale-105 transition-all shadow-2xl"
+            <Button 
+              size="lg"
+              className="bg-gradient-to-r from-red-500 to-orange-500 hover:opacity-90 text-white text-lg px-8 py-6 hover:scale-105 transition-all shadow-2xl"
+            >
+              <Icon name="FolderOpen" className="mr-3" size={24} />
+              Free Sample - MEGA Part 1
+            </Button>
+          </a>
+          <a 
+            href="https://t.me/tokare2"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Icon name="Send" className="mr-3" size={24} />
-            Contact for MEGA on Telegram
-          </Button>
-        </a>
+            <Button 
+              size="lg"
+              className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-6 hover:scale-105 transition-all shadow-2xl"
+            >
+              <Icon name="Send" className="mr-3" size={24} />
+              Contact for MEGA on Telegram
+            </Button>
+          </a>
+        </div>
+        <p className="text-center text-white/70 text-sm max-w-md mx-auto">
+          Just write to the Telegram admin and tell them the amount and method
+        </p>
       </div>
       
       <Card className="max-w-2xl w-full p-6 bg-green-500/10 backdrop-blur-sm border-2 border-green-500/50">
