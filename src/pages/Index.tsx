@@ -18,12 +18,19 @@ const Index = () => {
       </Card>
 
       <div className="text-center max-w-2xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
           Want MEGAs like these?
         </h2>
-        <p className="text-xl text-white/90 mb-2">
-          You need to pay for access - $20
-        </p>
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <Card className="p-6 bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm border-2 border-blue-500/50">
+            <h3 className="text-3xl font-bold text-white mb-2">$20</h3>
+            <p className="text-xl text-white/90">Basic Access</p>
+          </Card>
+          <Card className="p-6 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm border-2 border-purple-500/50">
+            <h3 className="text-3xl font-bold text-white mb-2">$30</h3>
+            <p className="text-xl text-white/90">5 TB Premium</p>
+          </Card>
+        </div>
         <p className="text-lg text-white/80 mb-6">
           PayPal / Bitcoin accepted
         </p>
