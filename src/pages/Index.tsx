@@ -124,15 +124,24 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="mt-8 w-full max-w-md">
-        <h3 className="text-2xl font-bold text-center text-white mb-4">Payment Proof</h3>
-        <Card className="overflow-hidden bg-card/50 backdrop-blur-sm">
-          <img 
-            src="https://cdn.poehali.dev/projects/e9e41fa1-812d-4553-bb86-c4bc67c5be5e/bucket/ce4ba450-4fd4-40e9-9711-a546eebf3286.jpg"
-            alt="Payment confirmation"
-            className="w-full h-auto"
-          />
-        </Card>
+      <div className="mt-8 w-full max-w-5xl">
+        <h3 className="text-2xl font-bold text-center text-white mb-6">Payment Proof & Customer Messages</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card className="overflow-hidden bg-card/50 backdrop-blur-sm">
+            <img 
+              src="https://cdn.poehali.dev/projects/e9e41fa1-812d-4553-bb86-c4bc67c5be5e/bucket/ce4ba450-4fd4-40e9-9711-a546eebf3286.jpg"
+              alt="Payment confirmation"
+              className="w-full h-auto"
+            />
+          </Card>
+          <Card className="overflow-hidden bg-card/50 backdrop-blur-sm">
+            <img 
+              src="https://cdn.poehali.dev/projects/e9e41fa1-812d-4553-bb86-c4bc67c5be5e/bucket/4d22fedc-690f-4fc7-9359-a386de13b43f.jpg"
+              alt="Customer testimonials and proof"
+              className="w-full h-auto"
+            />
+          </Card>
+        </div>
       </div>
     </div>
   );
