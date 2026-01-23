@@ -36,19 +36,46 @@ const Index = () => {
         </p>
       </div>
 
-      <a 
-        href="https://t.me/tokare2"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Button 
-          size="lg"
-          className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-6 hover:scale-105 transition-all shadow-2xl"
+      <div className="flex flex-col md:flex-row gap-4">
+        <a 
+          href="https://mega.nz/folder/VCkDCLhK#kpjca29NPocQ-wWsa936cw"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <Icon name="Send" className="mr-3" size={24} />
-          Contact for MEGA on Telegram
-        </Button>
-      </a>
+          <Button 
+            size="lg"
+            className="bg-gradient-to-r from-red-500 to-orange-500 hover:opacity-90 text-white text-lg px-8 py-6 hover:scale-105 transition-all shadow-2xl"
+          >
+            <Icon name="FolderOpen" className="mr-3" size={24} />
+            Free Sample - MEGA Part 1
+          </Button>
+        </a>
+        <a 
+          href="https://t.me/tokare2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button 
+            size="lg"
+            className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-6 hover:scale-105 transition-all shadow-2xl"
+          >
+            <Icon name="Send" className="mr-3" size={24} />
+            Contact for MEGA on Telegram
+          </Button>
+        </a>
+      </div>
+      
+      <Card className="max-w-2xl w-full p-6 bg-green-500/10 backdrop-blur-sm border-2 border-green-500/50">
+        <div className="flex items-start gap-3">
+          <Icon name="CheckCircle" size={28} className="text-green-400 flex-shrink-0" />
+          <div>
+            <h3 className="text-xl font-bold text-white mb-2">Proof of Availability</h3>
+            <p className="text-white/90">
+              Check out Part 1 for FREE to verify quality and authenticity. This is real content, available now. Once you confirm, contact us to get full access to all premium folders!
+            </p>
+          </div>
+        </div>
+      </Card>
 
       <div className="mt-12 w-full max-w-4xl">
         <h3 className="text-3xl font-bold text-center text-white mb-8">Customer Reviews</h3>
